@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sudoku Solver</h1>
+    <div class="container">
+        <table id="sudoku-grid">
+            <tr>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+            </tr>
+            <tr>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+                <td><input type="number" min="1" max="9" class="input-grid" id="input-grid"></td>
+            </tr>
+        </table>
+        <button id="solve-btn">Résoudre</button>
+        <button id="clear-btn">Nettoyer la grille</button>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
